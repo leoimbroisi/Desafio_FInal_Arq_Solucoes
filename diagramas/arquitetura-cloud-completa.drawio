@@ -151,8 +151,17 @@
                 <mxCell id="label-replication" value="Synchronous&#xa;Replication" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#C925D1;fontStyle=1;" parent="1" vertex="1">
                     <mxGeometry x="850" y="1230" width="100" height="30" as="geometry"/>
                 </mxCell>
+                <mxCell id="label-failover-db" value="FAILOVER AUTOMÁTICO&#xa;RDS Multi-AZ&#xa;Tempo: &lt; 60 segundos" style="text;html=1;strokeColor=#C925D1;fillColor=#F5EEF8;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontColor=#C925D1;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="1210" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-failover-ec2" value="FAILOVER AUTOMÁTICO&#xa;Auto Scaling + Health Checks&#xa;Recria instâncias em &lt; 5 min" style="text;html=1;strokeColor=#147EBA;fillColor=#E6F2F8;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontColor=#147EBA;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1400" y="680" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="label-failover-alb" value="FAILOVER AUTOMÁTICO&#xa;ALB Health Checks&#xa;Remove instâncias não saudáveis" style="text;html=1;strokeColor=#ED7100;fillColor=#FFF4E6;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontColor=#ED7100;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="480" width="220" height="60" as="geometry"/>
+                </mxCell>
                 <mxCell id="legend-container" value="LEGENDA - Arquitetura E-commerce AWS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F8F8;strokeColor=#666666;verticalAlign=top;align=left;fontSize=14;fontStyle=1;spacing=15;arcSize=3;" parent="1" vertex="1">
-                    <mxGeometry x="40" y="1400" width="1920" height="280" as="geometry"/>
+                    <mxGeometry x="40" y="1400" width="1920" height="540" as="geometry"/>
                 </mxCell>
                 <mxCell id="legend-network" value="🌐 REDE &amp; SEGURANÇA:&#xa;&#xa;• Internet Gateway: Conectividade pública&#xa;• NAT Gateway (3x): Acesso internet para recursos privados&#xa;• Application Load Balancer: Distribuição Layer 7&#xa;• WAF: Proteção contra ataques web&#xa;• Route 53: DNS com health checks" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
                     <mxGeometry x="70" y="1450" width="360" height="200" as="geometry"/>
@@ -216,6 +225,9 @@
                 </mxCell>
                 <mxCell id="cloudwatch" value="CloudWatch&#xa;Monitoring &amp; Alarms" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#759C3E;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=11;fontStyle=1;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.cloudwatch;" parent="1" vertex="1">
                     <mxGeometry x="2060" y="520" width="70" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-failover" value="🔄 MECANISMOS DE FAILOVER:&#xa;&#xa;• RDS Multi-AZ: Failover automático &lt; 60s&#xa;• ALB Health Checks: Remove instâncias não saudáveis&#xa;• Auto Scaling: Substitui VMs com falha em &lt; 5min&#xa;• ElastiCache: Promoção automática de réplica&#xa;• Route 53: Health checks e DNS failover&#xa;• NAT Gateway: Redundância em cada AZ" style="text;html=1;strokeColor=#DD344C;fillColor=#FFF0F0;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=1;fontColor=#DD344C;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="1700" width="360" height="200" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
